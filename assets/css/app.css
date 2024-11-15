@@ -7,7 +7,7 @@
         @apply text-3xl font-bold;
     }
     /* Default link style */
-    .link {
+    a {
         @apply text-blue-600 hover:text-blue-800 underline cursor-pointer transition-colors;
     }
 }
