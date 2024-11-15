@@ -8,6 +8,6 @@ defmodule SampleAppWeb.PageController do
   end
 
   def hello(conn, _param) do
-    html(conn, "hello, World!")
+    html(conn, "hello, world!")
   end
 end

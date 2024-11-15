@@ -23,11 +23,13 @@ defmodule SampleAppWeb.ConnCase do
       @endpoint SampleAppWeb.Endpoint
 
       use SampleAppWeb, :verified_routes
-
       # Import conveniences for testing with connections
       import Plug.Conn
       import Phoenix.ConnTest
       import SampleAppWeb.ConnCase
+
+      import Phoenix.LiveViewTest
+      use HTMLAssertion
     end
   end
 

@@ -51,6 +51,7 @@ defmodule SampleApp.MixProject do
        app: false,
        compile: false,
        depth: 1},
+      {:html_assertion, "~> 0.1.3", only: :test},
       {:swoosh, "~> 1.5"},
       {:finch, "~> 0.13"},
       {:telemetry_metrics, "~> 1.0"},
