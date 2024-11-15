@@ -8,4 +8,8 @@ defmodule SampleAppWeb.StaticPageController do
   def help(conn, _params) do
     render(conn, :help)
   end
+
+  def about(conn, _params) do
+    render(conn, :about)
+  end
 end
