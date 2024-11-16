@@ -10,5 +10,7 @@ defmodule SampleAppWeb.Layouts do
   """
   use SampleAppWeb, :html
 
+  import SampleAppWeb.Layouts.HeaderComponent
+  import SampleAppWeb.Layouts.FooterComponent
   embed_templates "layouts/*"
 end

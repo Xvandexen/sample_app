@@ -1,12 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" class="[scrollbar-gutter:stable]">
   <head>
-    <title>
-      <%= SampleAppWeb.Helpers.DynamicTextHelpers.page_title(Enum.into(assigns,
-      %{action: @conn.private.phoenix_action})) %>
-    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="csrf-token" content={get_csrf_token()} />
+    <.live_title>
+    <%= assigns[:page_title] || "Home" %> | Phoenix Tutorial Sample App
+    </.live_title>
+    <link phx-track-static rel="stylesheet" href={~p"/assets/app.css"} />
+    <script defer phx-track-static type="text/javascript" src={~p"/assets/app.js"}>
+    </script>
   </head>
   <body>
-    <%= @inner_content %>
+    <.site_header />
+
+    <div class="container mx-auto px-4 mt-20">
+      <.flash_group flash={@flash} />
+      <%= @inner_content %>
+      <.site_footer />
+    </div>
   </body>
 </html>
