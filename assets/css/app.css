@@ -4,7 +4,7 @@
 
 @layer components {
     h1 {
-        @apply text-3xl font-bold;
+        @apply text-3xl font-bold text-center;
     }
     /* Default link style */
     a {

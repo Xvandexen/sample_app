@@ -11,31 +11,30 @@ defmodule SampleAppWeb.StaticPageControllerTest do
   end
 
   test "should get home", %{conn: conn} do
-    conn = get(conn, ~p"/static_pages/home")
+    conn = get(conn, ~p"/home")
 
     html_response(conn, 200)
     |> assert_select("title", "Home | #{@base_title}")
   end
 
   test "should get help", %{conn: conn} do
-    conn = get(conn, ~p"/static_pages/help")
+    conn = get(conn, ~p"/help")
 
     html_response(conn, 200)
     |> assert_select("title", "Help | #{@base_title}")
   end
 
   test "should get about", %{conn: conn} do
-    conn = get(conn, ~p"/static_pages/about")
+    conn = get(conn, ~p"/about")
 
     html_response(conn, 200)
     |> assert_select("title", "About | #{@base_title}")
   end
 
   test "should get contact", %{conn: conn} do
-    conn = get(conn, ~p"/static_pages/contact")
+    conn = get(conn, ~p"/contact")
 
     html_response(conn, 200)
     |> assert_select("title", "Contact | #{@base_title}")
   end
-
 end
