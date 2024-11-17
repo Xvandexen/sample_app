@@ -24,7 +24,7 @@ defmodule SampleAppWeb.Layouts.HeaderComponent do
                 <.link href={~p"/help"} class="text-gray-300 hover:text-white">Help</.link>
               </li>
               <li>
-                <.link href={~p"/login"} id="login" class="text-gray-300 hover:text-white">
+                <.link href={#} id="login" class="text-gray-300 hover:text-white">
                   Login
                 </.link>
               </li>

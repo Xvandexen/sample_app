@@ -55,4 +55,8 @@ defmodule SampleApp.DataCase do
       end)
     end)
   end
+
+  def exclude_password_fields(user) do
+    %{user | password: nil, password_confirmation: nil}
+  end
 end

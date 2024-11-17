@@ -24,7 +24,7 @@ defmodule SampleApp.MixProject do
   end
 
   # Specifies which paths to compile per environment.
-  defp elixirc_paths(:test), do: ["lib", "test/support"]
+  defp elixirc_paths(:test), do: ["lib", "test/support", "test/factories"]
   defp elixirc_paths(_), do: ["lib"]
 
   # Specifies your project dependencies.
@@ -60,7 +60,9 @@ defmodule SampleApp.MixProject do
       {:jason, "~> 1.2"},
       {:dns_cluster, "~> 0.1.1"},
       {:bandit, "~> 1.5"},
-      {:mix_test_watch, "~> 1.1", only: [:dev, :test], runtime: false}
+      {:mix_test_watch, "~> 1.1", only: [:dev, :test], runtime: false},
+      {:argon2_elixir, "2.4.0"},
+      {:ex_machina, "2.7.0", only: :test}
     ]
   end
 
